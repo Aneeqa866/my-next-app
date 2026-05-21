@@ -5,7 +5,7 @@ import { fetchTracks } from "../services/tracksService";
 
 export { slugify } from "../data/tracks";
 
-const TracksContext = createContext();
+const TracksContext = createContext({ tracks: [], loading: true });
 
 export function TracksProvider({ children }) {
   const [tracks, setTracks] = useState([]);

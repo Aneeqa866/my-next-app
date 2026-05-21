@@ -7,7 +7,7 @@ import Loader from "../components/Loader";
 
 function PlayerPage() {
   const params = useParams();
-  const slug = params.slug;
+  const slug = params?.slug;
   const router = useRouter();
   const { tracks, loading } = useTracks();
 

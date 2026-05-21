@@ -6,7 +6,20 @@ import { useAuth } from "./AuthContext";
 const slugify = (s) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-const PlayerContext = createContext(null);
+const PlayerContext = createContext({
+  currentTrack: null,
+  playing: false,
+  current: 0,
+  duration: 0,
+  volume: 0.6,
+  speed: 1,
+  playTrack: () => {},
+  togglePlay: () => {},
+  seek: () => {},
+  setVolume: () => {},
+  setSpeed: () => {},
+  stop: () => {},
+});
 
 const PROGRESS_WRITE_INTERVAL_MS = 5000;
 

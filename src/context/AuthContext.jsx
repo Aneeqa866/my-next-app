@@ -20,7 +20,23 @@ import { auth, db } from "../firebase/config";
 import { slugify } from "../data/tracks";
 import Loader from "../components/Loader";
 
-const AuthContext = createContext(null);
+const AuthContext = createContext({
+  user: null,
+  authReady: false,
+  busy: false,
+  likes: [],
+  favourites: [],
+  progress: {},
+  isLiked: () => false,
+  isFavourite: () => false,
+  toggleLike: () => {},
+  toggleFavourite: () => {},
+  saveProgress: async () => {},
+  clearProgress: async () => {},
+  login: async () => {},
+  signup: async () => {},
+  logout: async () => {},
+});
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
