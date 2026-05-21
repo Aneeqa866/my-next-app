@@ -1,0 +1,155 @@
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.auth-card {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 28px 30px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.auth-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+}
+
+.auth-close:hover {
+  color: #222;
+}
+
+.auth-title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 22px;
+  color: #222;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-field label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-field input:focus {
+  border-color: #ff6b3d;
+}
+
+.auth-password {
+  position: relative;
+}
+
+.auth-password input {
+  padding-right: 38px;
+}
+
+.auth-eye {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.auth-eye:hover {
+  color: #ff6b3d;
+}
+
+.auth-forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #ff6b3d;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+.auth-forgot:hover {
+  text-decoration: underline;
+}
+
+.auth-submit {
+  margin-top: 6px;
+  padding: 10px;
+  background: #ff6b3d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background: #ff5722;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+
+.auth-switch a {
+  color: #ff6b3d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 22px 20px;
+    width: 92%;
+  }
+
+  .auth-title {
+    font-size: 19px;
+    margin-bottom: 18px;
+  }
+
+  .auth-field input {
+    font-size: 16px;
+  }
+}

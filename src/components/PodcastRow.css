@@ -1,0 +1,125 @@
+.row {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.row-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 0 30px;
+    margin-bottom: 14px;
+}
+
+.row-header h2 {
+    font-size: 22px;
+    color: #222;
+}
+
+.row-header h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #E97B65;
+    transform: rotate(45deg);
+    margin-right: 8px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+.row-header h2::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #E97B65;
+    transform: rotate(45deg);
+    margin-left: 8px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+}
+
+
+
+.row-header .subtitle {
+    font-size: 13px;
+    color: #888;
+    padding-left: 10px;
+}
+
+.row-scroller {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 6px 30px;
+    scrollbar-width: none;
+}
+
+.row-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-30%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    z-index: 2;
+}
+
+.scroll-btn:hover {
+    background: #f9f9f9;
+}
+
+@media (max-width: 1024px) {
+    .row-header {
+        padding: 0 18px;
+    }
+
+    .row-scroller {
+        padding: 6px 18px;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 640px) {
+    .row {
+        margin-bottom: 28px;
+    }
+
+    .row-header {
+        padding: 0 14px;
+    }
+
+    .row-header h2 {
+        font-size: 18px;
+    }
+
+    .row-header .subtitle {
+        font-size: 12px;
+    }
+
+    .row-scroller {
+        padding: 6px 14px;
+        gap: 12px;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+}
